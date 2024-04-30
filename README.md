@@ -289,9 +289,6 @@ if __name__ == "__main__":
 ```
 
 ### 3. Desarrolle un programa que permita obtener la  [matriz transpuesta](https://es.wikipedia.org/wiki/Matriz_transpuesta) de una matriz ingresada. El programa debe validar las condiciones necesarias para ejecutar la operación.
-## PRUEBA DE CAMBIOOOOOOOOOOOOOOOOOO
-## PRUEBA DE CAMBIOOOOOOOOOOOOOOOOOO
-## PRUEBA DE CAMBIOOOOOOOOOOOOOOOOOO
 
 ```python
 # Se declaran e inicializan las listas
