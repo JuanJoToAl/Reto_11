@@ -15,7 +15,7 @@ def llenar_matriz(matriz : list, num_filas : int,
         # Se recorre la cantidad de columnas ingresadas por el usuario
         for j in range(num_columnas):
         # Se solicita al usuairo que ingrese los números van a ir en cada fila
-            filas.append(float(input(f"Ingrese un número ({i + 1}, {j + 1})")))
+            filas.append(float(input(f"Ingrese el número ({i + 1}, {j + 1})")))
         # Se añade la fila a la matriz
         matriz.append(filas) 
         # Se imprime la fila ver como se va construyendo la matriz

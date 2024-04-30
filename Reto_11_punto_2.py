@@ -9,6 +9,7 @@ num_filas_primera : int
 num_columnas_primera : int
 num_filas_segunda : int
 num_columnas_segunda : int
+producto_elemento : float
 
 
 
@@ -21,7 +22,9 @@ def llenar_matriz_primera(matriz_primera : list, num_filas_primera : int,
         # Se recorre la cantidad de columnas ingresadas por el usuario
         for j in range(num_columnas_primera):
         # Se solicita al usuairo que ingrese los números van a ir en cada fila
-            filas.append(float(input(f"Primera matriz: ingrese un número ({i + 1}, {j + 1})")))
+            filas.append(float(input(
+                                    f"Primera matriz: ingrese el número ({i + 1}, {j + 1})"
+                                    )))
         # Se añade la fila a la matriz
         matriz_primera.append(filas) 
         # Se imprime la fila ver como se va construyendo la matriz
@@ -41,7 +44,9 @@ def llenar_matriz_segunda(matriz_segunda : list, num_filas_segunda : int,
         # Se recorre la cantidad de columnas ingresadas por el usuario
         for j in range(num_columnas_segunda):
         # Se solicita al usuairo que ingrese los números van a ir en cada fila
-            filas.append(float(input((f"Segunda matriz: ingrese un número ({i + 1}, {j + 1})"))))
+            filas.append(float(input((
+                                    f"Segunda matriz: ingrese el número ({i + 1}, {j + 1})"
+                                    ))))
         # Se añade la fila a la matriz
         matriz_segunda.append(filas) 
         # Se imprime la fila para ver como se va construyendo la matriz
@@ -51,8 +56,8 @@ def llenar_matriz_segunda(matriz_segunda : list, num_filas_segunda : int,
 
     return matriz_segunda
 
-def multiplicar_matrices(matriz_primera, matriz_segunda, 
-                         multiplicacion_final : list, filas : list) -> list:
+def multiplicar_matrices(matriz_primera : list, matriz_segunda : list, 
+                         multiplicacion_final : list, filas : list) -> list: 
     # Se vacía la lista para no interferir en el proceso de la otra matriz
     filas = []
     # Se recorren las filas de la primera matriz
@@ -62,10 +67,10 @@ def multiplicar_matrices(matriz_primera, matriz_segunda,
         for j in range(len(matriz_segunda[0])):
             # Se almacenan los elementos de las columnas en la variable 
             columnas = [matriz_segunda[i][j] for i in range(len(matriz_segunda))]
-            # Se multiplica una fila por las columnas
-            multiplicacion_elemento = sum(filas[i] * columnas[i] for i in range(len(filas)))
+            # Se multiplica una fila por una columna y se suman los resultados 
+            producto_elemento = sum(filas[i] * columnas[i] for i in range(len(filas))) 
             # Se almacena el resultado en la lista
-            multiplicacion_final.append(multiplicacion_elemento)
+            multiplicacion_final.append(producto_elemento)
     print(f"Los elementos de la nueva matriz son: {multiplicacion_final}")
     
     return multiplicacion_final

@@ -9,8 +9,7 @@ num_filas_primera : int
 num_columnas_primera : int
 num_filas_segunda : int
 num_columnas_segunda : int
-suma_filas : list
-resta_filas : list
+
 
 
 
@@ -23,7 +22,9 @@ def llenar_matriz_primera(matriz_primera : list, num_filas_primera : int,
         # Se recorren la cantidad de columnas ingresadas por el usuario
         for j in range(num_columnas_primera):
         # Se solicita al usuairo que ingrese los números van a ir en cada fila
-            filas.append(float(input(f"Ingrese un número ({i + 1}, {j + 1})")))
+            filas.append(float(input(
+                                    f"Primera matriz: ingrese el número ({i + 1}, {j + 1})"
+                                    )))
         # Se añade la fila a la matriz
         matriz_primera.append(filas) 
         # Se imprime la fila ver como se va construyendo la matriz
@@ -43,7 +44,9 @@ def llenar_matriz_segunda(matriz_segunda : list, num_filas_segunda : int,
         # Se recorren la cantidad de columnas ingresadas por el usuario
         for j in range(num_columnas_segunda):
         # Se solicita al usuairo que ingrese los números van a ir en cada fila
-            filas.append(float(input((f"Ingrese un número ({i + 1}, {j + 1})"))))
+            filas.append(float(input((
+                                    f"Segunda matriz: ingrese el número ({i + 1}, {j + 1})"
+                                    ))))
         # Se añade la fila a la matriz
         matriz_segunda.append(filas) 
         # Se imprime la fila para ver como se va construyendo la matriz
@@ -53,40 +56,44 @@ def llenar_matriz_segunda(matriz_segunda : list, num_filas_segunda : int,
 
     return matriz_segunda
 
-def sumar_matrices(matriz_primera, matriz_segunda, 
-                   matriz_suma : list) -> list:
+def sumar_matrices(matriz_primera : list, matriz_segunda : list, 
+                   matriz_suma : list, filas : list) -> list: 
+    # Se vacía la lista para no interferir en el proceso de la otra matriz
+    filas = []
     print("La suma de las matrices se ve de la siguiente forma:")
     # Se recorren las filas de las matrices
     for i in range(len(matriz_primera)):
-        # Se vacía la lista "suma_filas" para no interferir en la suma
-        suma_filas = [] 
         # Se recorren las las columnas de las matrices
         for j in range(len(matriz_primera)):
             # Se suman los valores según su fila y columna
-            suma_filas.append(matriz_primera[i][j] + matriz_segunda[i][j]) 
+            filas.append(matriz_primera[i][j] + matriz_segunda[i][j]) 
         # Se imprime la fila para ver cómo se contruye la matriz
-        print(suma_filas)
+        print(filas)
         # Se agrega la fila a la matriz final
-        matriz_suma.append(suma_filas)
+        matriz_suma.append(filas)
+        # Se vacía variable para llenarla con números de la siguiente fila
+        filas = []
         
         
     return matriz_suma
 
-def restar_matrices(matriz_primera, matriz_segunda, 
-                   matriz_resta : list) -> list:
+def restar_matrices(matriz_primera : list, matriz_segunda : list, 
+                   matriz_resta : list, filas : list) -> list:
+    # Se vacía la lista para no interferir en el proceso de la otra matriz
+    filas = []
     print("La resta de las matrices se ve de la siguiente forma:")
     # Se recorren las filas de las matrices
     for i in range(len(matriz_primera)):
-        # Se vacía la lista "resta_filas" para no interferir en la suma
-        resta_filas = []
         # Se recorren las las columnas de las matrices
         for j in range(len(matriz_primera)):
             # Se restan los valores según su fila y columna
-            resta_filas.append(matriz_primera[i][j] - matriz_segunda[i][j]) 
+            filas.append(matriz_primera[i][j] - matriz_segunda[i][j]) 
         # Se imprime la fila para ver cómo se contruye la matriz
-        print(resta_filas)
+        print(filas)
         # Se agrega la fila a la matriz final
-        matriz_resta.append(resta_filas)
+        matriz_resta.append(filas)
+        # Se vacía variable para llenarla con números de la siguiente fila
+        filas = []
         
         
     return matriz_resta
@@ -126,7 +133,9 @@ if __name__ == "__main__":
         matriz_segunda = llenar_matriz_segunda(matriz_segunda, num_filas_segunda, 
                                                num_columnas_segunda, filas)
         # Llamado de función para sumar matrices
-        matriz_suma = sumar_matrices(matriz_primera, matriz_segunda, matriz_suma)
+        matriz_suma = sumar_matrices(matriz_primera, matriz_segunda, 
+                                     matriz_suma, filas) 
         # Llamado de función para restar matrices
-        matriz_resta = restar_matrices(matriz_primera, matriz_segunda, matriz_resta)
+        matriz_resta = restar_matrices(matriz_primera, matriz_segunda, 
+                                       matriz_resta, filas) 
         
