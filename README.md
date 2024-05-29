@@ -161,7 +161,6 @@ if __name__ == "__main__":
     elif num_filas_primera != num_filas_segunda :
         if num_columnas_primera != num_columnas_segunda:
             print("No se pueden sumar las matrices porque no son del mismo orden")
-
     elif num_columnas_primera != num_columnas_segunda:
         print("No se puede sumar las matrices porque no son del mismo orden")
         
@@ -238,7 +237,11 @@ def llenar_matriz_segunda(matriz_segunda : list, num_filas_segunda : int,
 
     # Se recorre la cantidad de filas ingresadas por el usuario
     for i in range(num_filas_segunda): 
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> e7f7b421f5ff46d88d0abfe1d0e7815ebc884da7
         # Se recorre la cantidad de columnas ingresadas por el usuario
         for j in range(num_columnas_segunda):
 
@@ -344,6 +347,7 @@ if __name__ == "__main__":
         print("No se pueden multiplicar las matrices porque el número de columnas" 
               " de la primera es diferente al número de filas de la segunda"
               )
+
     else:
         # Llamado de función para llenar la primera matriz
         matriz_primera = llenar_matriz_primera(matriz_primera, num_filas_primera, 
@@ -400,8 +404,13 @@ def llenar_matriz(matriz : list, num_filas : int,
 
     return matriz
 
+<<<<<<< HEAD
 def trasponer_matriz(num_filas : int, num_columnas : int, 
                      filas : list, matriz : list) -> list:
+=======
+    def trasponer_matriz(num_filas : int, num_columnas : int, 
+                        filas : list, matriz : list) -> list:
+>>>>>>> e7f7b421f5ff46d88d0abfe1d0e7815ebc884da7
 
     # Se vacía la lista para no interferir en el proceso de la otra matriz
     filas = [] 
@@ -594,7 +603,11 @@ if __name__ == "__main__":
     # Condicional para solicitud de fila fuera de rango
     elif num_filas < fila:
         print(f"La matriz no tiene fila {fila}")
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> e7f7b421f5ff46d88d0abfe1d0e7815ebc884da7
     else:
         # Llamado de función para llenar la primera matriz
         matriz = llenar_matriz(matriz, num_filas, num_columnas, filas)
