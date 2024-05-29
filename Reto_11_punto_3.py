@@ -7,8 +7,29 @@ filas : list = []
 num_filas : int
 num_columnas : int
 
-def llenar_matriz(matriz : list, num_filas : int, 
-                          num_columnas : int, filas : list) -> list:
+def llenar_matriz(matriz : list, num_filas : int, num_columnas : int, filas : list) -> list:
+    """
+    La función `llenar_matriz` toma una lista que representa una matriz y 
+    la llena con los parámetros ingresados por el usuario y devuelve la 
+    matriz completa.
+    
+    Args:
+        matriz (list): Es una lista que almacenará los elementos de la 
+        matriz que se va a llenar.
+
+        num_filas (int): Representa el número de filas en la matriz que el
+        usuario desea crear.
+
+        num_columnas (int): Representa el número de columnas en la matriz que
+        el usuario desea crear.
+
+        filas (list): Es una lista que se usa para almacenar los números que 
+        el usuario ingresa para cada fila de la matriz. 
+    
+    Returns:
+        Se devuelve la matriz llena como una lista de listas después de que 
+        el usuario haya ingresado los números para cada celda de la matriz.
+    """
 
     print(f"La matriz se ve de la siguiente forma:")
 
@@ -34,6 +55,24 @@ def llenar_matriz(matriz : list, num_filas : int,
 
 def trasponer_matriz(num_filas : int, num_columnas : int, 
                      filas : list, matriz : list) -> list:
+    """
+    Esta función de Python transpone una matriz según el número de 
+    filas y columnas proporcionadas por el usuario.
+    
+    Args:
+        num_filas (int): Representa el número de filas en la matriz original.
+
+        num_columnas (int): Representa el número de columnas en la matriz
+        original. 
+
+        filas (list): Almacenar las filas transpuestas de la matriz. 
+
+        matriz (list): Es la matriz original que se va a trasponer.
+    
+    Returns:
+        Se devuelve una matriz transpuesta basada en los parámetros de entrada
+        y la matriz proporcionada.
+    """
     
     # Se vacía la lista para no interferir en el proceso de la otra matriz
     filas = [] 
