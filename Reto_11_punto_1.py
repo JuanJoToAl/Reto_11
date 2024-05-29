@@ -16,7 +16,29 @@ num_columnas_segunda : int
 
 def llenar_matriz_primera(matriz_primera : list, num_filas_primera : int, 
                           num_columnas_primera : int, filas : list) -> list:
+    """
+    La función `llenar_matriz_primera` toma la entrada del usuario para llenar una matriz con
+    dimensiones específicas y devuelve la matriz llena.
+    
+    Args:
+      matriz_primera (list): El parámetro `matriz_primera` es una lista que almacenará los elementos de
+      la primera matriz que está llenando el usuario.
 
+      num_filas_primera (int): El parámetro `num_filas_primera` representa el número de filas de la
+      matriz. 
+
+      num_columnas_primera (int): `num_columnas_primera` es el número de columnas en la primera matriz
+      que el usuario necesita ingresar. 
+
+      filas (list): El parámetro `filas` en la función `llenar_matriz_primera` es una lista que se
+      utiliza para almacenar los elementos de cada fila de la matriz. 
+    
+    Returns:
+      La función `llenar_matriz_primera` devuelve la matriz llena `matriz_primera` después de que el
+      usuario haya ingresado los números para cada celda de la matriz.
+    """
+
+  
     print(f"La primera matriz se ve de la siguiente forma:")
 
     # Se recorren la cantidad de filas ingresadas por el usuario
@@ -43,6 +65,29 @@ def llenar_matriz_primera(matriz_primera : list, num_filas_primera : int,
 
 def llenar_matriz_segunda(matriz_segunda : list, num_filas_segunda : int, 
                           num_columnas_segunda : int, filas : list) -> list:
+    """
+    Esta función de Python llena una segunda matriz con valores ingresados 
+    por el usuario según el número especificado de filas y columnas.
+    
+    Args:
+        matriz_segunda (list): El parámetro `matriz_segunda` es una lista 
+        que almacenará los elementos de la primera matriz que está llenando 
+        el usuario.
+        
+        num_filas_segunda (int): El parámetro `num_filas_segunda` representa 
+        el número de filas en la segunda matriz. 
+
+        num_columnas_segunda (int): El parámetro `num_columnas_segunda` 
+        representa el número de columnas en la segunda matriz. 
+
+        filas (list): El parámetro `filas` es una lista que se utiliza para 
+        almacenar los números que irán en cada fila de la segunda matriz. 
+        
+    Returns:
+        La función `llenar_matriz_segunda` devuelve la `matriz_segunda` 
+        actualizada después de llenarla con los valores ingresados por 
+        el usuario.
+    """
     
     # Se vacía la lista para no interferir en el proceso de la otra matriz
     filas = []
@@ -72,6 +117,27 @@ def llenar_matriz_segunda(matriz_segunda : list, num_filas_segunda : int,
 
 def sumar_matrices(matriz_primera : list, matriz_segunda : list, 
                    matriz_suma : list, filas : list) -> list: 
+    """
+    Esta función toma dos matrices como entrada, suma sus elementos 
+    correspondientes y devuelve la matriz resultante.
+    
+    Args:
+        matriz_primera (list): Representa la primera matriz que se agregará.
+        
+        matriz_segunda (list): Representa la segunda matriz que desea agregar a
+        la primera matriz (`matriz_primera`).
+        
+        matriz_suma (list): Es una lista que almacenará el resultado de sumar
+        las matrices `matriz_primera` y `matriz_segunda`.
+        
+        filas (list): Almacena la suma de elementos de las posiciones
+        correspondientes en las dos matrices de entrada `matriz_primera` y
+        `matriz_segunda`.
+    
+    Returns:
+        Se retorna la matriz final `matriz_suma`, resultado de sumar
+        las dos matrices de entrada `matriz_primera` y `matriz_segunda`.
+    """
     
     # Se vacía la lista para no interferir en el proceso de la otra matriz
     filas = []
@@ -99,7 +165,28 @@ def sumar_matrices(matriz_primera : list, matriz_segunda : list,
     return matriz_suma
 
 def restar_matrices(matriz_primera : list, matriz_segunda : list, 
-                   matriz_resta : list, filas : list) -> list:
+                    matriz_resta : list, filas : list) -> list:
+    """
+    Esta función resta dos matrices por elementos y 
+    devuelve la matriz resultante.
+    
+    Args:
+        matriz_primera (list): Representa la primera matriz que se agregará.
+        
+        matriz_segunda (list): Representa la segunda matriz que desea restar a
+        la primera matriz (`matriz_primera`).
+        
+        matriz_resta (list): Es una lista que almacenará el resultado de restar
+        las matrices `matriz_primera` y `matriz_segunda`.
+        
+        filas (list): Almacena la resta de elementos de las posiciones
+        correspondientes en las dos matrices de entrada `matriz_primera` y
+        `matriz_segunda`.
+    
+    Returns:
+        Se retorna la matriz final `matriz_resta`, resultado de restar
+        las dos matrices de entrada `matriz_primera` y `matriz_segunda`.
+    """
     
     # Se vacía la lista para no interferir en el proceso de la otra matriz
     filas = []
@@ -122,7 +209,6 @@ def restar_matrices(matriz_primera : list, matriz_segunda : list,
 
         # Se vacía variable para llenarla con números de la siguiente fila
         filas = []
-        
         
     return matriz_resta
 
