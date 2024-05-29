@@ -10,6 +10,26 @@ suma_columna : float
 
 def llenar_matriz(matriz : list, num_filas : int, num_columnas : int, 
                   filas : list) -> list:
+    """
+    Esta función de Python llena una matriz con números ingresados 
+    por el usuario.
+    
+    Args:
+        matriz (list): Es una lista que almacenará los elementos de la 
+        matriz que se está llenando.
+
+        num_filas (int): Representa el número de filas en la matriz que 
+        el usuario quiere crear.
+
+        num_columnas (int): Representa el número de columnas en la matriz 
+        que el usuario desea crear.
+
+        filas (list): Es una lista que se utiliza para almacenar 
+        los elementos de cada fila de la matriz. 
+    
+    Returns:
+        Se devuelve la matriz llena como una lista.
+    """
 
     print(f"La matriz se ve de la siguiente forma:")
 
@@ -34,6 +54,20 @@ def llenar_matriz(matriz : list, num_filas : int, num_columnas : int,
     return matriz
 
 def sumar_columnas(matriz : list, columna : int) -> list:
+    """
+    La función `sumar_columnas` toma una matriz y un índice de columna 
+    como entrada, suma los elementos de esa columna y devuelve la suma.
+    
+    Args:
+        matriz (list): Es una lista de listas. 
+        
+        columna (int): Representa el índice de la columna en 
+        la matriz que desea sumar. 
+    
+    Returns:
+        Se devuelve la suma de los elementos en la columna especificada 
+        de la matriz de entrada.
+    """
     
     # Se suman los elementos de la columna
     suma_columna = sum(matriz[i][columna - 1] for i in range(len(matriz)))
