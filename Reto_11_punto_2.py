@@ -14,7 +14,8 @@ producto_elemento : float
 
 
 
-def llenar_matriz_primera(matriz_primera : list, num_filas_primera : int, num_columnas_primera : int, filas : list) -> list:
+def llenar_matriz_primera(matriz_primera : list, num_filas_primera : int, 
+                          num_columnas_primera : int, filas : list) -> list:
     """
     Esta función llena una matriz con valores ingresados por el 
     usuario fila por fila y muestra la matriz a medida que se construye.

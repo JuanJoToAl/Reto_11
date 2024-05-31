@@ -287,7 +287,8 @@ producto_elemento : float
 
 
 
-def llenar_matriz_primera(matriz_primera : list, num_filas_primera : int, num_columnas_primera : int, filas : list) -> list:
+def llenar_matriz_primera(matriz_primera : list, num_filas_primera : int, 
+                          num_columnas_primera : int, filas : list) -> list:
     """
     Esta función llena una matriz con valores ingresados por el 
     usuario fila por fila y muestra la matriz a medida que se construye.
@@ -553,7 +554,8 @@ filas : list = []
 num_filas : int
 num_columnas : int
 
-def llenar_matriz(matriz : list, num_filas : int, num_columnas : int, filas : list) -> list:
+def llenar_matriz(matriz : list, num_filas : int, 
+                  num_columnas : int, filas : list) -> list:
     """
     La función `llenar_matriz` toma una lista que representa una matriz y 
     la llena con los parámetros ingresados por el usuario y devuelve la 
@@ -790,7 +792,8 @@ num_columnas : int
 fila : int
 suma_fila : float
 
-def llenar_matriz(matriz : list, num_filas : int, num_columnas : int, filas : list) -> list:
+def llenar_matriz(matriz : list, num_filas : int, 
+                  num_columnas : int, filas : list) -> list:
     """
     La función `llenar_matriz` toma la entrada del usuario para llenar 
     una matriz con un número específico de filas y columnas.

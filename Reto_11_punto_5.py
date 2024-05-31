@@ -8,7 +8,8 @@ num_columnas : int
 fila : int
 suma_fila : float
 
-def llenar_matriz(matriz : list, num_filas : int, num_columnas : int, filas : list) -> list:
+def llenar_matriz(matriz : list, num_filas : int, 
+                  num_columnas : int, filas : list) -> list:
     """
     La función `llenar_matriz` toma la entrada del usuario para llenar 
     una matriz con un número específico de filas y columnas.
